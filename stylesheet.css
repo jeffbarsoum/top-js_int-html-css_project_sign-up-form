@@ -1,9 +1,20 @@
+    /*-----------------------------------
+   CSS Global Variables
+   ----------------------------------*/
+   :root {
+    --midpage-margin: 20px
+   }
+
+  
   /*-----------------------------------
    CSS Reset
    ----------------------------------*/
+  /*
+   https://www.joshwcomeau.com/css/custom-css-reset/#the-css-reset-1
+  */
 
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+  /* 1. Use a more-intuitive box-sizing model */
+  *, *::before, *::after {
     box-sizing: border-box;
   }
   
@@ -54,13 +65,170 @@
   /*-----------------------------------
    Form CSS
    ----------------------------------*/
-
    @font-face {
+     font-family: 'Norse';
+     src: url('font/Norse-Bold.woff2') format('woff2'),
+     url('font/Norse-Bold.woff') format('woff');
+     font-weight: bold;
+     font-style: normal;
+     font-display: swap;
+    }
+    
+    body {
+     display: flex;
+     font-family: 'Helvetica', 'Arial', sans-serif;
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+  }
+
+
+    /* CSS for left side of page (background / logo)*/
+    .background {
+        display: flex;
+        flex-direction: column;
+        background-image: url('img/halie-west-25xggax4bSA-unsplash.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align:center;
+        padding:0;
+        color: white;
+        min-width: 40vw;
+    }
+
+    img {
+        max-height: 10rem;
+    }
+
+    .logo {
+        display: flex;
+        background-color: black;
+        opacity: 70%;
+        margin-top: 172px;
+        text-align: center;
+        justify-content: center;
+        min-width: 400px;
+        align-items: center;
+    }
+
+    .logo-text {
+        color: white;
         font-family: 'Norse';
-        src: url('Norse-Bold.woff2') format('woff2'),
-            url('Norse-Bold.woff') format('woff');
         font-weight: bold;
         font-style: normal;
-        font-display: swap;
+        font-size: 7rem;
     }
+
+    .footer {
+      margin: auto 0px 20px;
+    }
+
+    .footer > a:link {
+      color: white;
+    }
+
+    .footer > a:visited {
+      color: rgb(129, 124, 124);
+    }
+ 
+
+    /* Form Section CSS */
+    .form-header,
+    .form-footer {
+      background-color: #f9fbfc;
+    }
+    
+    .form-header {
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
+      
+    .main-font {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+      
+    p {
+      padding: 20px var(--midpage-margin) 20px;
+    }
+
+    .form-content {
+      box-shadow: 0px 2px 8px rgb(91, 90, 90);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .form {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .form-column {
+      display: flex;
+      flex-direction: column; 
+      margin: 0px 0px 20px var(--midpage-margin);
+    }
+
+    .form-input {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.7rem;
+      color: rgb(114, 114, 114);
+      padding: 10px 0px;
+      min-width: 200px;
+    }
+
+    input {
+      border-radius: 4px;
+      border: 1px solid black
+    }
+    
+    input:focus {
+      outline: none;
+      border: 3px solid blue;
+      box-shadow: 0px 2px 2px grey;
+    }
+    
+    input[type='password']:invalid {
+      border-color: red;
+    }
+
+    
+    /* Submit Section CSS */
+    .form-footer {
+      padding-top: 20px;
+    }
+
+    button {
+        background-color: #596D48;
+        color: white;
+        border-radius: 7px;
+        width: 225px;
+        height: 50px;
+        font-weight: bold;
+        margin: 20px var(--midpage-margin) 20px;
+    }
+
+    .button-caption {
+      padding: 0px var(--midpage-margin) 20px;
+      }
+
+    .button-caption > a:link {
+      color: #596D48;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .button-caption > a:visited {
+      color: rgb(129, 124, 124);
+    }
+
+
+
+    
 
